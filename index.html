@@ -1,161 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Tạo ảnh online</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://janshare.github.io/img/biajanshare.png">
-  <link rel="icon" type="image/webp" href="/img/logo.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
-  <style>
-:root{--pink-soft: #ffd1dc;--blue-soft: #e6f3ff;--purple-soft: #f0e6ff;--green-soft: #e6ffe6;--yellow-soft: #fff9e6;--orange-soft: #ffe6d9;--lavender-soft: #f3e6ff;--mint-soft: #e6fff9;--primary-pink: #ff5a81;--primary-blue: #89cff0;--primary-purple: #d1a3ff;--primary-green: #a8e6a3;--primary-yellow: #fff066;--primary-orange: #ffb366;--text-dark: #5a5a5a;--text-light: #8a8a8a;--white: #ffffff;--shadow-cute: 0 8px 25px rgba(255, 182, 193, 0.3);--shadow-hover: 0 12px 35px rgba(255, 182, 193, 0.4)} *{box-sizing: border-box} body{font-family: "Lobster", sans-serif;background: linear-gradient(135deg, #ffeef8 0%, #f0f8ff 50%, #fff0f8 100%);min-height: 100vh;margin: 0;padding: 0;position: relative;overflow-x: hidden} body::before{content: '';position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.15) 0%, transparent 50%), radial-gradient(circle at 90% 10%, rgba(173, 216, 230, 0.15) 0%, transparent 50%), radial-gradient(circle at 50% 90%, rgba(221, 160, 221, 0.15) 0%, transparent 50%);pointer-events: none} .floating-elements{position: fixed;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;z-index: 1} .floating-heart{position: absolute;font-size: 20px;color: rgba(255, 182, 193, 0.6);animation: float 6s ease-in-out infinite} .floating-star{position: absolute;font-size: 16px;color: rgba(255, 223, 0, 0.6);animation: twinkle 3s ease-in-out infinite} .floating-cloud{position: absolute;font-size: 24px;color: rgba(173, 216, 230, 0.6);animation: drift 8s ease-in-out infinite} @keyframes float{0%, 100%{transform: translateY(0) rotate(0deg)} 50%{transform: translateY(-20px) rotate(10deg)} } @keyframes twinkle{0%, 100%{opacity: 0.3;transform: scale(1)} 50%{opacity: 1;transform: scale(1.2)} } @keyframes drift{0%{transform: translateX(0)} 50%{transform: translateX(30px)} 100%{transform: translateX(0)} } .container{max-width: 1200px;margin: 0 auto;padding: 40px 20px;position: relative;z-index: 2} .header{text-align: center;margin-bottom: 50px;position: relative} .header::before{content: '';position: absolute;top: -30px;left: 50%;transform: translateX(-50%);font-size: 40px;animation: bounce 2s ease-in-out infinite} @keyframes bounce{0%, 20%, 50%, 80%, 100%{transform: translateX(-50%) translateY(0)} 40%{transform: translateX(-50%) translateY(-10px)} 60%{transform: translateX(-50%) translateY(-5px)} } h1{font-size: clamp(2.5rem, 5vw, 4rem);font-weight: 800;color: var(--primary-pink);margin: 0;text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.3);position: relative;z-index: 2} .subtitle{font-size: 1.3rem;color: var(--text-light);margin-top: 15px;font-weight: 600;position: relative} .cute-divider{display: flex;align-items: center;justify-content: center;margin: 30px 0;gap: 15px} .cute-divider::before, .cute-divider::after{content: '';flex: 1;height: 3px;background: linear-gradient(90deg, transparent, var(--primary-pink), transparent);border-radius: 3px} .cute-divider span{font-size: 24px;animation: rotate 4s linear infinite} @keyframes rotate{0%{transform: rotate(0deg)} 100%{transform: rotate(360deg)} } .title-grid{display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));gap: 25px;margin-top: 40px} .title-box{display: block;border-radius: 25px;padding: 25px;text-decoration: none;color: var(--text-dark);font-size: 20px;font-family: "Pacifico", cursive;font-weight: 600;line-height: 1.6;position: relative;transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);box-shadow: var(--shadow-cute);border: 3px solid var(--white);overflow: hidden} .title-box::before{content: '';position: absolute;top: -50%;left: -50%;width: 200%;height: 200%;background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);transform: scale(0);transition: transform 0.6s ease;z-index: 1} .title-box:hover::before{transform: scale(1)} .title-box:nth-child(8n+1){background: var(--pink-soft)} .title-box:nth-child(8n+2){background: var(--blue-soft)} .title-box:nth-child(8n+3){background: var(--purple-soft)} .title-box:nth-child(8n+4){background: var(--green-soft)} .title-box:nth-child(8n+5){background: var(--yellow-soft)} .title-box:nth-child(8n+6){background: var(--orange-soft)} .title-box:nth-child(8n+7){background: var(--lavender-soft)} .title-box:nth-child(8n+8){background: var(--mint-soft)} .title-box:hover{transform: translateY(-10px) scale(1.05);box-shadow: var(--shadow-hover);border-color: var(--primary-pink)} .title-box .icon{font-size: 32px;margin-right: 15px;display: inline-block;transition: all 0.4s ease;position: relative;z-index: 2} .title-box:hover .icon{transform: scale(1.3) rotate(15deg);filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.6))} .title-text{position: relative;z-index: 2} .loading{text-align: center;padding: 60px 20px;color: var(--primary-pink);font-size: 20px;font-weight: 600} .loading::before{content: '🌸';display: inline-block;font-size: 30px;margin-right: 15px;animation: spin 2s linear infinite} @keyframes spin{0%{transform: rotate(0deg)} 100%{transform: rotate(360deg)} } .error{text-align: center;padding: 40px;background: var(--pink-soft);border-radius: 25px;color: var(--text-dark);font-size: 18px;font-weight: 600;box-shadow: var(--shadow-cute);border: 3px solid var(--white)} .error::before{content: '🥺';display: block;font-size: 48px;margin-bottom: 15px} .stats{display: flex;justify-content: center;gap: 30px;margin-top: 50px;flex-wrap: wrap} .stat-item{background: var(--white);padding: 25px 35px;border-radius: 20px;text-align: center;color: var(--text-dark);box-shadow: var(--shadow-cute);border: 3px solid var(--pink-soft);transition: all 0.3s ease;position: relative;overflow: hidden} .stat-item::before{content: '';position: absolute;top: -50%;left: -50%;width: 200%;height: 200%;background: radial-gradient(circle, var(--pink-soft) 0%, transparent 70%);transform: scale(0);transition: transform 0.5s ease} .stat-item:hover::before{transform: scale(1)} .stat-item:hover{transform: translateY(-5px);box-shadow: var(--shadow-hover)} .stat-number{font-size: 2.5rem;font-weight: 800;display: block;color: var(--primary-pink);position: relative;z-index: 2} .stat-label{font-size: 0.95rem;margin-top: 8px;font-weight: 600;position: relative;z-index: 2} .stat-emoji{font-size: 24px;margin-bottom: 10px;display: block;position: relative;z-index: 2} @media (max-width: 768px){.container{padding: 20px 15px} .title-grid{grid-template-columns: 1fr;gap: 20px} .title-box{padding: 20px;font-size: 20px;font-family: "Pacifico", cursive} .stats{gap: 20px} .stat-item{padding: 20px 25px} } @media (max-width: 480px){h1{font-size: 2.5rem} .subtitle{font-size: 1.1rem} .title-box{padding: 18px;border-radius: 20px} .title-box .icon{font-size: 28px} }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDung Lyric - Tạo Lyrics TikTok 3 Ảnh Free</title>
+    <style>
+        body { background: #121212; color: #E0E0E0; font-family: system-ui; text-align: center; padding: 40px 20px; }
+        h1 { color: #1DB954; font-size: 2.5em; }
+        .btn { background: #1DB954; color: #121212; padding: 18px 40px; font-size: 1.3em; border-radius: 50px; text-decoration: none; display: inline-block; margin: 30px 0; }
+        .btn:hover { background: #1ed760; }
+    </style>
 </head>
 <body>
-  <div class="floating-elements">
-    <div class="floating-heart" style="top: 10%; left: 5%;">💕</div>
-    <div class="floating-star" style="top: 20%; right: 10%;">⭐</div>
-    <div class="floating-cloud" style="top: 15%; left: 15%;">☁️</div>
-    <div class="floating-heart" style="top: 60%; right: 5%;">💖</div>
-    <div class="floating-cloud" style="bottom: 20%; right: 15%;">🌤️</div>
-    <div class="floating-heart" style="top: 40%; left: 3%;">💝</div>
-    <div class="floating-star" style="top: 70%; right: 20%;">🌟</div>
-  </div>
-
-  <div class="container">
-    <div class="header">
-      <h1>📚 Danh sách bài viết</h1>
-      <p class="subtitle">Trang chủ Janshare.com 🥰</p>
-      <div class="cute-divider">
-        <span>🌸</span>
-      </div>
-    </div>
-    
-    <div class="title-grid" id="post-list">
-      <div class="loading">Đang tải dữ liệu...</div>
-    </div>
-    
-    <div class="stats" id="stats" style="display: none;">
-      <div class="stat-item">
-        <span class="stat-emoji">📝</span>
-        <span class="stat-number" id="total-posts">0</span>
-        <span class="stat-label">Bài viết</span>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const sheetURL = "https://docs.google.com/spreadsheets/d/1F11fUHWMQbHVtddpH2huBp6qYZy_XgqS0yuCIOjPIf0/gviz/tq?tqx=out:json&tq&gid=490826669";
-    const cuteEmojis = [
-      '🌸', '🌺', '🌻', '🌷', '🌹', '🌼', '🌿', '🍀', '🌱', '🌳',
-      '🦋', '🐝', '🐞', '🐛', '🦄', '🐰', '🐱','🐼', '🐻',
-      '🍓', '🍒', '🍑', '🍊', '🍋', '🍌', '🍇', '🍈', '🍉', '🥝',
-      '🎀', '🎁', '🎈', '🎉', '🎊', '🎂', '🍰', '🧁', '🍪', '🍭',
-      '💝', '💖', '💕', '💗', '💘', '💞', '💓', '💟', '🌟',
-      '🔮', '🎨', '🎭', '🎪', '🎡', '🎢', '🎠', '🎯', '🎲', '🧸'
-    ];
-    
-    function getRandomCuteEmoji() {
-      return cuteEmojis[Math.floor(Math.random() * cuteEmojis.length)];
-    }
-    
-    function animateNumber(element, target, duration = 1500) {
-      const start = 0;
-      const increment = target / (duration / 16);
-      let current = start;
-      
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
-        element.textContent = Math.floor(current);
-      }, 16);
-    }
-    document.addEventListener('click', function(e) {
-      const sparkle = document.createElement('div');
-      sparkle.innerHTML = '🍗';
-      sparkle.style.position = 'fixed';
-      sparkle.style.left = e.clientX + 'px';
-      sparkle.style.top = e.clientY + 'px';
-      sparkle.style.fontSize = '20px';
-      sparkle.style.pointerEvents = 'none';
-      sparkle.style.zIndex = '9999';
-      sparkle.style.animation = 'sparkleEffect 1s ease-out forwards';
-      document.body.appendChild(sparkle);
-      
-      setTimeout(() => {
-        sparkle.remove();
-      }, 1000);
-    });
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes sparkleEffect {
-        0% { opacity: 1; transform: scale(0) rotate(0deg); }
-        50% { opacity: 1; transform: scale(1.5) rotate(180deg); }
-        100% { opacity: 0; transform: scale(0) rotate(360deg); }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    fetch(sheetURL)
-      .then(res => res.text())
-      .then(text => {
-        const jsonText = text.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\);/)[1];
-        const data = JSON.parse(jsonText);
-        const rows = data.table.rows;
-        const postList = document.getElementById("post-list");
-        const stats = document.getElementById("stats");
-        const totalPosts = document.getElementById("total-posts");
-        postList.innerHTML = "";
-        rows.slice(0).forEach((row, index) => {
-          const title = row.c[1]?.v || "Không có tiêu đề";
-          const link = row.c[2]?.v || "#";
-          
-          const a = document.createElement("a");
-          a.href = link;
-          a.className = "title-box";
-          a.target = "_blank";
-          
-          const icon = document.createElement("span");
-          icon.className = "icon";
-          icon.textContent = getRandomCuteEmoji();
-          
-          const text = document.createElement("span");
-          text.className = "title-text";
-          text.textContent = title;
-          
-          a.appendChild(icon);
-          a.appendChild(text);
-          postList.appendChild(a);
-          
-          setTimeout(() => {
-            a.style.opacity = "0";
-            a.style.transform = "translateY(30px) scale(0.8)";
-            a.style.transition = "all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-            
-            setTimeout(() => {
-              a.style.opacity = "1";
-              a.style.transform = "translateY(0) scale(1)";
-            }, 100);
-          }, index * 150);
-        });
-        
-        setTimeout(() => {
-          stats.style.display = "flex";
-          animateNumber(totalPosts, rows.length);
-        }, rows.length * 150 + 500);
-        
-      })
-      .catch(err => {
-        document.getElementById("post-list").innerHTML = 
-          '<div class="error">Không thể tải dữ liệu. Vui lòng thử lại sau nhé!</div>';
-        console.error("Lỗi:", err);
-      });
-  </script>
+    <img src="img/logo.png" width="180" alt="TDung Lyric">
+    <h1>TDung Lyric</h1>
+    <p style="font-size:1.3em; max-width:600px; margin:20px auto;">Công cụ tạo Lyrics TikTok 3 ảnh nối tiếp đẹp nhất • Miễn phí 100% • Buôn Ma Thuột</p>
+    <a href="lyric3.html" class="btn">🚀 BẮT ĐẦU TẠO LYRICS 3 ẢNH NGAY</a>
+    <p style="margin-top:50px; font-size:0.9em; opacity:0.7;">Made with ❤️ by TDung • Buôn Ma Thuột, Đắk Lắk</p>
 </body>
 </html>
